@@ -1,0 +1,294 @@
+html {
+  background-color: black;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.banner-bottom {
+  display: none;
+}
+
+path {
+  fill: none;
+  stroke: white;
+  stroke-width: 0.5;
+}
+
+p {
+  font-family: "andret_tblight";
+  color: white;
+}
+
+a {
+  font-family: "andret_tblight";
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  padding-top: 3vw;
+  width: 15vw;
+}
+
+li {
+  font-size: 0.8em;
+  font-weight: 100;
+  font-family: 'andret_tblight';
+  line-height: 1.5em;
+  color: white;
+  list-style-type: none;
+}
+
+h1 {
+  font-weight: 100;
+  font-family: 'andret_tblight';
+  color: white !important;
+  font-size: 6em;
+  line-height: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h2 {
+  font-weight: 50;
+  font-family: 'andret_tblight';
+  color: white !important;
+  font-size: 2em;
+  margin-block-start: 1em;
+  margin-block-end: 0;
+}
+
+#home_logo {
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 2em;
+  z-index: 1;
+}
+
+#home_logo img {
+  max-width: 3.5em;
+}
+
+#countdown {
+  position: absolute;
+  top: 8%;
+  left: 85%;
+  margin-right: 3em;
+  text-align: right;
+  font-size: 5em;
+  line-height: 1em;
+  margin-block-start: 0.1em;
+  margin-block-end: 0;
+}
+
+.banner {
+  overflow: hidden;
+  background-color: black;
+  z-index: 10;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+@keyframes design_list_slide {
+  from {
+    transform: translate(0em, 0em);
+  }
+
+  to {
+    transform: translate(-1000vh, 0em);
+    ;
+  }
+}
+
+#text {
+  white-space: nowrap;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: design_list_slide;
+}
+
+#text p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.title {
+  order: 3;
+  margin-left: 2em;
+  padding-bottom: 6em;
+}
+
+.footer {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-top: 1px solid white;
+}
+
+.footer img {
+  max-width: 8em;
+  max-height: 5em;
+  padding-bottom: 2em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em 2em 1em 2em;
+}
+
+.bottone {
+  font-family: "andret_tblight";
+  cursor: pointer;
+  border-left: 4px solid grey;
+  padding-left: 0.5em;
+}
+
+#filter {
+  width: 10%;
+  margin-top: 1em;
+  line-height: 2em;
+}
+
+#filter a{
+  color: black;
+  margin-block-start:0;
+  margin-block-end:0;
+}
+.stroke{
+    stroke: black;
+    stroke-width: 2;
+
+}
+.filter-active {
+  text-decoration: underline;
+  border-left: 4px solid #403EFF;
+}
+
+#empty {
+  flex-grow: 1;
+}
+
+.button {
+  border: 2px solid black;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  text-align: center;
+}
+
+.button a {
+  color: black;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#gwork {
+  background-color: black;
+  color: white;
+}
+
+#gwork a {
+  color: white;
+}
+
+.home {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-family: "andret_tblight"
+}
+
+.visualizzazione {
+  width: 100vw;
+}
+
+#my_dataviz svg {
+  width: 100%;
+  height: 100%;
+}
+
+#infopoetry {
+  position: absolute;
+  top: 90%;
+  left: 86%;
+  z-index: 2;
+  background-color: white;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  #banner {
+    order: 1;
+  }
+
+  #countdown {
+    font-size: 3.5em;
+    left: 67.5%;
+    margin-top: 0;
+  }
+
+  #text p {
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  .title {
+    order: 2;
+    margin-left: 1.5em;
+    padding-bottom: 0;
+    padding-top: 80%;
+  }
+
+  .banner-bottom {
+    display: block;
+    order: 3;
+    overflow: hidden;
+    background-color: black;
+    z-index: 10;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    flex-grow: 0;
+  }
+
+  #home_logo {
+    margin-left: 1.5em;
+  }
+
+  #home_logo img {
+    max-width: 4em;
+  }
+
+  .footer {
+    display: none;
+  }
+}
