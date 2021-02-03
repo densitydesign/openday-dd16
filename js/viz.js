@@ -34,7 +34,7 @@ let y1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
   .range([10*ch*3,30*ch,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3,20*ch*2,30*ch]);
 
-var tooltip = d3.select("body").append("div")   
+var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
 
 
@@ -71,15 +71,15 @@ d3.csv("js/density.csv").then(data => {
     // console.log(d.group)
     return d.group;
   }));
-  
+
   // Draw circles
 
   svg.selectAll('.circ')
     .data(data)
     .enter()
     .append('image').classed('circ', true)
-    .attr('width', 50)
-    .attr('height', 50)
+    .attr('width', 60)
+    .attr('height', 60)
     .attr('x', function(d) {
       // console.log(x(d.phase))
       return x1(d.group) - 20;
@@ -94,17 +94,17 @@ d3.csv("js/density.csv").then(data => {
       .on("start", dragstarted)
       .on("drag", dragged)
       .on("end", dragended));
-       
+
     d3.selectAll(".circ")
-    .on("mouseover", function(d) {   
+    .on("mouseover", function(d) {
     console.log("tooltip" + tooltip)
-    tooltip.html(d)  
-      .style("left", (d3.event.pageX) + "px")     
+    tooltip.html(d)
+      .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY - 28) + "px")
       .style("opacity", 100);
-  })                  
-  .on("mouseout", function(d) {       
-    tooltip.style("opacity", 0);   
+  })
+  .on("mouseout", function(d) {
+    tooltip.style("opacity", 0);
   });
 
 
@@ -157,7 +157,7 @@ d3.csv("js/density.csv").then(data => {
       d3.selectAll('.bottone').classed("filter-active",false)
       d3.select(this).classed("filter-active",true)
 
-      
+
     data_setX = this.id;
 
 
@@ -208,7 +208,7 @@ console.log("ridisegno")
           .attr("height", height2);
 
         // Draw an X to show that the size is correct.
-       
+
       }
 
  redraw();
