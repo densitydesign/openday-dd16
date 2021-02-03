@@ -21,16 +21,32 @@
     background-color: black;
   }
 
-  svg {
-    hyphens: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    z-index: 0;
-    cursor: url('cursor.png') 50 50, auto;
-  }
+
+  body {
+margin: 0;
+padding: 0;
+
+width: 100%;
+height: 100vh;
+
+background: black;
+background-image: linear-gradient(rgba(255,255,255, .5), .1em), linear-gradient(90deg, rgba(255,255,255, .5), .1em);
+background-size: 1.3em 1.3em;
+}
+
+div.tooltip {
+position: absolute;
+text-align: center;
+width: 60px;
+height: 28px;
+padding: 2px;
+font: 12px sans-serif;
+background: lightsteelblue;
+border: 0px;
+border-radius: 8px;
+pointer-events: none;
+}
+
 </style>
 
 <body>
@@ -40,6 +56,7 @@
   <div id="home_logo">
     <a href="home.html"><img src="img/logo/dd16_logo.svg"></a>
   </div>
+
 
 
   <div class="container">
@@ -88,7 +105,30 @@
       </div>
     </div>
 
+    <div class="menu">
+
+      <div id="empty">
+      </div>
+
+
+      <div id="empty">
+      </div>
+
+      <div class="button-light" id="hub">
+        <a href="hub.html">LIVE</a>
+      </div>
+
+      <div class="button-light" id="about">
+        <a href="about.html">ABOUT</a>
+      </div>
+
+    </div>
+
+
+
       <h1>WE ARE ONLINE!</h1>
+
+    <p>  Follow the live stream to have more information about all the projects and the faculty topics. </p>
 
 
 
