@@ -206,12 +206,14 @@ h2 {
   padding: 0.5em;
   margin-left: 0.5em;
   text-align: center;
+  background-color: black;
 }
 
 .button-light a {
   color: white;
   margin-block-start: 0;
   margin-block-end: 0;
+  background-color: black;
 }
 
 #gwork {
