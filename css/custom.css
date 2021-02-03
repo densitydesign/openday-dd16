@@ -265,12 +265,11 @@ h2 {
   .title {
     order: 2;
     margin-left: 1.5em;
-    padding-bottom: 0;
     padding-top: 80%;
   }
 
   .banner-bottom {
-    display: block;
+    display: none;
     order: 3;
     overflow: hidden;
     background-color: black;
