@@ -192,8 +192,11 @@ h2 {
 
 }
 .filter-active {
-  font-family: 'andret_tbbold';
   border-left: 4px solid #403EFF;
+}
+
+.filter-active a{
+  font-family: 'andret_tbmedium';
 }
 
 #empty {
@@ -219,6 +222,18 @@ h2 {
   margin-left: 0.5em;
   text-align: center;
   background-color: black;
+}
+
+.button-light_active {
+  border: 2px solid white;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  text-align: center;
+  background-color: white;
+}
+
+.button-light_active a {
+  color: black;
 }
 
 .button-light a {
@@ -262,6 +277,24 @@ h2 {
   left: 87%;
   z-index: 2;
   background-color: white;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 2em;
+}
+
+.content h1{
+  font-family: "andret_tblight";
+  font-size: 3em;
+}
+
+.content iframe{
+  max-width: 80vw;
+  max-height: 60vh;
+  border: 1px solid white;
 }
 
 

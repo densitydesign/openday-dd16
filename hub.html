@@ -17,35 +17,18 @@
 </head>
 
 <style type="text/css">
-  html {
-    background-color: black;
-  }
-
-
   body {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 
-width: 100%;
-height: 100vh;
+    width: 100%;
+    height: 100vh;
 
-background: black;
-background-image: linear-gradient(rgba(255,255,255, .5), .1em), linear-gradient(90deg, rgba(255,255,255, .5), .1em);
-background-size: 1.3em 1.3em;
-}
-
-div.tooltip {
-position: absolute;
-text-align: center;
-width: 60px;
-height: 28px;
-padding: 2px;
-font: 12px sans-serif;
-background: lightsteelblue;
-border: 0px;
-border-radius: 8px;
-pointer-events: none;
-}
+    background: black;
+    background-image: linear-gradient(to right, grey 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, grey 0.5px, transparent 0.5px);
+    background-size: 1.3em 1.3em;
+  }
 
 </style>
 
@@ -114,8 +97,8 @@ pointer-events: none;
       <div id="empty">
       </div>
 
-      <div class="button-light" id="hub">
-        <a href="hub.html">LIVE</a>
+      <div class="button-light_active" id="hub">
+        <a>LIVE</a>
       </div>
 
       <div class="button-light" id="about">
@@ -125,15 +108,18 @@ pointer-events: none;
     </div>
 
 
+    <div class="content">
+      <h1>We are online!</h1>
 
-      <h1>WE ARE ONLINE!</h1>
-
-    <p>  Follow the live stream to have more information about all the projects and the faculty topics. </p>
-
-
+      <p> Follow the live stream to have more information about all the projects and the faculty topics. </p>
 
 
+      <iframe height="80%" src="https://www.youtube.com/embed/G1IbRujko-A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
+
+
+
 
 
 
