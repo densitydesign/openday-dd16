@@ -19,7 +19,7 @@ let x = d3.scaleOrdinal()
 
 let x1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
-  .range([0 + padding,rnd((width/9)) + padding, rnd(width)  + padding, rnd((width/9)*2)  + padding, rnd((width/9)*3)  + padding, rnd((width/9)*4)  + padding, rnd((width/9)*5) + padding, rnd((width/9)*6)  + padding, rnd((width/9)*7) + padding]);
+  .range([cw*5, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
 
 
 function rnd( max) {
@@ -32,7 +32,7 @@ let data_setX = "group";
 
 let y1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
-  .range([height/9,height/9*1.5,height/9*3,height/9*4.5,height/9*6,height/9*7.5,height,350,300]);
+  .range([10*ch*3,30*ch,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3,20*ch*2,30*ch]);
 
 var tooltip = d3.select("body").append("div")   
     .attr("class", "tooltip");
