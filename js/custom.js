@@ -3,8 +3,8 @@ $(document).ready(function() {
 
   //Grid d3
 
-  var width = 2000,
-    height = 1200,
+  var width = 3000,
+    height = 2000,
     xStepsBig = d3.range(10, width, 20),
     yStepsBig = d3.range(10, height, 20),
     xStepsSmall = d3.range(0, width + 6, 6),
