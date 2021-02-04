@@ -156,7 +156,7 @@ d3.csv("js/density.csv").then(data => {
             
             
         
-    tooltip.html( "<p>Titolo Progetto: "+d.title+"</p><p>Gruppo: "+d.group+"</p> <p>Phase: "+d.phase+"</p>")
+    tooltip.html( "<p>Titolo Progetto: "+d.title+"</p><p> "+d.group+"</p> <p>"+d.phase+"</p>")
        
       .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY - 28) + "px")
