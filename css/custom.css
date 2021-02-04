@@ -148,7 +148,6 @@ h3 {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 
@@ -376,6 +375,7 @@ h3 {
 
 .id img {
   max-width: 7em;
+  min-width: 0.5em;
 }
 
 .id p {
