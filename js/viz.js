@@ -107,6 +107,8 @@ d3.csv("js/density.csv").then(data => {
     d3.selectAll(".circ")
     .on("mouseover", function(d) {
         d3.select(this).attr("href",d.imgHover)
+        d3.selectAll(".circ").transition().style("opacity",.5)
+        d3.select(this).transition().style("opacity",1)
       
 //       
      
@@ -151,12 +153,13 @@ d3.csv("js/density.csv").then(data => {
         
            console.log(next)
         d3.select(next3).attr("href","images/imgH"+next1+".png")
+            
         
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
             
             
         
-    tooltip.html( "<p>Titolo Progetto: "+d.title+"</p><p> "+d.group+"</p> <p>"+d.phase+"</p>")
+    tooltip.html( "<p>Titolo: "+d.title+"</p><p>Team: "+d.group+"</p> <p>"+d.phase+"</p>")
        
       .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY - 28) + "px")
@@ -166,7 +169,7 @@ d3.csv("js/density.csv").then(data => {
   .on("mouseout", function(d) {
          d3.select(this).attr("href",d.img)
          d3.select(next3).attr("href","images/img"+next1+".png")
-        
+        d3.selectAll(".circ").transition().style("opacity",1)
         d3.select(next4).attr("href","images/img"+next2+".png")
     tooltip.style("opacity", 0);
   })
