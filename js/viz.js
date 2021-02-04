@@ -1,3 +1,9 @@
+var cod
+var next
+var next1
+var next2
+var next3
+var next4
 
 let ch = window.innerHeight / 100;
 let cw = window.innerWidth / 100;
@@ -10,16 +16,16 @@ let svg = d3.select('#my_dataviz').append('svg')
   .attr('height', height)
 
 let colors = d3.scaleOrdinal()
-  .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
+  .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9 "])
   .range(["red", "green", "blue", "yellow", "orange", "pink", "cyan", "grey", "magenta"]);
 
 let x = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
-  .range([0 + padding, ((width/3)*3) + padding,((width/3)*1.5) + padding]);
+  .range([0 + padding+20, ((width/3)*3) + padding,((width/3)*1.5) + padding]);
 
 let x1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
-  .range([cw*5, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
+  .range([cw*5+20, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
 
 
 function rnd( max) {
@@ -32,7 +38,7 @@ let data_setX = "group";
 
 let y1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
-  .range([10*ch*3,30*ch,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3,20*ch*2,30*ch]);
+  .range([10*ch*3-20,30*ch+30,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3+150,20*ch*2+50,30*ch]);
 
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
@@ -90,6 +96,9 @@ d3.csv("js/density.csv").then(data => {
     .attr("href", function(d) {
       return d.img;
     })
+    .attr("id",function(d){
+      return d.id;
+  })
     .call(d3.drag() // call specific function when circle is dragged
       .on("start", dragstarted)
       .on("drag", dragged)
@@ -97,17 +106,84 @@ d3.csv("js/density.csv").then(data => {
 
     d3.selectAll(".circ")
     .on("mouseover", function(d) {
-    console.log("tooltip" + tooltip)
-    tooltip.html(d)
+        d3.select(this).attr("href",d.imgHover)
+        d3.selectAll(".circ").transition().style("opacity",.5)
+        d3.select(this).transition().style("opacity",1)
+      
+//       
+     
+        cod = d.id
+        next =  cod.slice(1)
+        if (next < 10){
+
+        next=parseInt(next)
+         next1 = next + 9;
+         next2 = next + 18;
+                             
+        next3 = "#p"+next1;
+         next4 = "#p"+next2;
+
+        
+           console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
+        
+        d3.select(next4).attr("href","images/imgH"+next2+".png")}
+        else if ((next < 19)&&(next > 9))
+        {
+        next =  cod.slice(1)
+        next=parseInt(next)
+        next1 = next - 9;
+        next2 = next + 9;
+        next3 = "#p"+next1;
+        next4 = "#p"+next2;
+        console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png") 
+        d3.select(next4).attr("href","images/imgH"+next2+".png")
+        }
+            
+        else {
+                  next =  cod.slice(1)
+        next=parseInt(next)
+         next1 = next - 9;
+         next2 = next - 18;
+                             
+        next3 = "#p"+next1;
+         next4 = "#p"+next2;
+
+        
+           console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
+            
+        
+        d3.select(next4).attr("href","images/imgH"+next2+".png")}
+            
+            
+        
+    tooltip.html( "<p>Titolo: "+d.title+"</p><p>Team: "+d.group+"</p> <p>"+d.phase+"</p>")
+       
       .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY - 28) + "px")
       .style("opacity", 100);
+        
   })
   .on("mouseout", function(d) {
+         d3.select(this).attr("href",d.img)
+         d3.select(next3).attr("href","images/img"+next1+".png")
+        d3.selectAll(".circ").transition().style("opacity",1)
+        d3.select(next4).attr("href","images/img"+next2+".png")
     tooltip.style("opacity", 0);
-  });
+  })
+.on("click",function(d){
+          window.open(
+      d.link,
+      '_blank' // <- This is what makes it open in a new window.
+    );
+    })
 
 
+    
+    
+    
   // Start force layout
   let simulation = d3.forceSimulation(data)
     .force('x', d3.forceX(function(d) {
@@ -121,7 +197,7 @@ d3.csv("js/density.csv").then(data => {
     .force('y', d3.forceY(function(d) {
       return y1(d.group)
     }).strength(0.80))
-    .force('collide', d3.forceCollide(25)
+    .force('collide', d3.forceCollide(30)
       .iterations(32))
     .alphaDecay(0)
     .alpha(0.1)

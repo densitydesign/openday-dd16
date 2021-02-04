@@ -3,6 +3,9 @@ html {
   height: 100%;
 }
 
+.circ:hover{
+    cursor: pointer;
+}
 body {
   margin: 0;
 }
