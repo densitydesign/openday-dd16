@@ -270,7 +270,7 @@ d3.csv("js/density.csv").then(data => {
 
 
 
-var chartDiv = document.getElementsByClassName("visualizzazione");
+var chartDiv = d3.select(".visualizzazione");
 
 function redraw(){
 console.log("ridisegno")
