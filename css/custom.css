@@ -397,7 +397,6 @@ h4 {
 
 .content-infopoetry_right {
   width: 35%;
-  position: sticky;
 }
 
 .content-infopoetry_right p {
@@ -413,6 +412,7 @@ h4 {
   flex-direction: row;
   width: 100%;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .info-preview {}
@@ -520,5 +520,24 @@ h4 {
 
   .container-about {
     overflow: hidden;
+  }
+
+  .content-infopoetry {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1em;
+  }
+
+  .content-infopoetry_right {
+    width: 35%;
+    display: none;
+  }
+
+  .blank {
+    height: 6em;
+    width: 6em;
+    background-color: blue;
+    margin: 0.5em;
   }
 }
