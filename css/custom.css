@@ -396,8 +396,8 @@ h4 {
 }
 
 .content-infopoetry_right {
-  width: 25%;
-  position: fixed;
+  width: 35%;
+  position: sticky;
 }
 
 .content-infopoetry_right p {
@@ -411,9 +411,8 @@ h4 {
 .content-infopoetry_left {
   display: flex;
   flex-direction: row;
-  width: 65%;
+  width: 100%;
   flex-flow: row wrap;
-  margin-right: 35%;
 }
 
 .info-preview {}
@@ -423,8 +422,8 @@ h4 {
 }
 
 .blank {
-  height: 5em;
-  width: 5em;
+  height: 6em;
+  width: 6em;
   background-color: blue;
   margin: 0.5em;
 }
