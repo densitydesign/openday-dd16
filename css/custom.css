@@ -397,6 +397,9 @@ h4 {
 
 .content-infopoetry_right {
   width: 35%;
+  height: 80%;
+  position: sticky;
+  top: 0;
 }
 
 .content-infopoetry_right p {
@@ -528,15 +531,27 @@ h4 {
   }
 
   .content-infopoetry {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 1em;
   }
 
   .content-infopoetry_right {
-    width: 35%;
-    display: none;
+    width: 80%;
+    position: fixed;
+    background-color: white;
+    padding: 1em;
+    border: 1px solid black;
+    top: auto;
+  }
+
+  .info-preview img {
+    max-width: 100%;
+  }
+
+  .content-infopoetry_right p {
+    color: black;
+    border: 0px solid black;
+    padding: 0em;
   }
 
   .blank {
