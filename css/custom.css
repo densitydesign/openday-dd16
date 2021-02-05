@@ -380,6 +380,7 @@ h3 {
 
 .id p {
   color: black;
+    max-width: 7em;
 }
 
 @media only screen and (max-width: 768px) {
