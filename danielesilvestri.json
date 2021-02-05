@@ -1,4 +1,4 @@
-const student = [
+[
 {"Group":"1","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/01.png","Name":"Claudia Maria Cutrupi"},
 {"Group":"1","Instagram":"https://www.instagram.com/saraferrini_","Twitter":"@sarabig9","Portfolio":"","LinkedIn":"","img":"student/02.png","Name":"Sara Ferrini"},
 {"Group":"1","Instagram":"https://www.instagram.com/b_maggi","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/03.png","Name":"Beatrice Maggi"},
@@ -16,7 +16,7 @@ const student = [
 {"Group":"3","Instagram":"https://www.instagram.com/rgb.elli","Twitter":"","Portfolio":"https://www.behance.net/elenagibelli","LinkedIn":"https://www.linkedin.com/in/elena-gibelli-1110041b6/","img":"student/15.png","Name":"Elena Gibelli"},
 {"Group":"3","Instagram":"https://www.instagram.com/rikalau_","Twitter":"","Portfolio":"https://federicalaurencio.bss.design/","LinkedIn":"https://www.linkedin.com/in/federica-laurencio/","img":"student/16.png","Name":"Federica Laurencio Tacoronte"},
 {"Group":"3","Instagram":"https://www.instagram.com/andreamario.m","Twitter":"-","Portfolio":"https://www.andreamorandini.com","LinkedIn":"Andrea Mario Morandini","img":"student/17.png","Name":"Andrea Mario Morandini"},
-{"Group":"3","Instagram":"https://www.instagram.com/jburrasca","Twitter":"","Portfolio":"http://www.jacoposironi.com","LinkedIn":"Jacopo Sironi","img":"student/18.png","Name":"Jacopo Sironi"},
+{"Group":"3","Instagram":"https://www.instagram.com/jburrasca","Twitter":"","Portfolio":"https://www.jacoposironi.com","LinkedIn":"Jacopo Sironi","img":"student/18.png","Name":"Jacopo Sironi"},
 {"Group":"3","Instagram":"https://www.instagram.com/pol_do","Twitter":"@MarcoValli4","Portfolio":"","LinkedIn":"https://www.linkedin.com/in/marco-valli-34318712a/","img":"student/19.png","Name":"Marco Valli"},
 {"Group":"4","Instagram":"https://www.instagram.com/andrmart","Twitter":"","Portfolio":"https://www.martina-andreotti.it","LinkedIn":"http://www.linkedin.com/in/martinaandreotti","img":"student/20.png","Name":"Martina Andreotti"},
 {"Group":"4","Instagram":"https://www.instagram.com/e.butt.l","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/21.png","Name":"Elena Buttolo"},
@@ -58,56 +58,3 @@ const student = [
 {"Group":"9","Instagram":"https://www.instagram.com/alessiarodler","Twitter":"","Portfolio":"https://www.alessiarodler.com/","LinkedIn":"https://www.linkedin.com/in/alessia-rodler-96897616b/detail/photo/","img":"student/56.png","Name":"Alessia Rodler"},
 {"Group":"9","Instagram":"","Twitter":"","Portfolio":"https://www.vera-salvaderi.it","LinkedIn":"https://www.linkedin.com/in/vera-salvaderi-39644117b","img":"student/57.png","Name":"Vera Salvaderi"}
 ]
-
-
-slicer(student)
-
-
-function slicer (a) {
-var i;
-for (i = 1; i <= 9; i++) {
- var newArray = a.filter(function (a) {
-     return (a.Group === String(i)); });
-    var j;
-    for (j=0;j< newArray.length; j++){
-        var qualialibi = menelao(newArray,j);
-    $("#g"+String(i)).append("<div class='id'><a href='"+qualialibi+"' target='_blank'> <img src="+newArray[j].img+"> </a><p>"+ newArray[j].Name +"</p> <a href='"+qualialibi+"'></div>")
-        }
-}
-
-
-}
-
-function menelao (a,j) {
-        if (a[j].Portfolio != ""){
-            console.log("giovanni")
-            return a[j].Portfolio
-        }
-        else if (a[j].LinkedIn != ""){
-             console.log("antonio")
-            return a[j].LinkedIn
-        }
-        else{
-             console.log("miriam")
-            return  a[j].Instagram
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
