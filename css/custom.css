@@ -428,6 +428,11 @@ h4 {
   margin: 0.5em;
 }
 
+.blank img {
+        max-width: 7em;
+    min-width: 0.5em;
+}
+
 @media only screen and (max-width: 768px) {
   .menu {
     margin: 1em 1em 1em 2em;
