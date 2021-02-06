@@ -350,8 +350,7 @@ h4 {
 
 .content iframe {
   margin-top: 2em;
-  max-width: 80vw;
-  max-height: 80vh;
+  min-height: 50vh;
   border: 1px solid white;
 }
 
@@ -499,7 +498,7 @@ h4 {
   }
 
   #home_logo {
-    margin-left: 1.5em;
+    margin-left: 1em;
   }
 
   #home_logo img {
