@@ -75,4 +75,9 @@ $(".blank").click(function() {
     $("#ballacomeseibella").text(infopoetry[agamennone].Name) 
     $("#wwwmipiacitu").attr("href", infopoetry[agamennone].link)
     
+     $(".content-infopoetry_right").css("display","block")
+})
+
+$(".info-close").click(function() {
+    $(".content-infopoetry_right").css("display","none")
 })
