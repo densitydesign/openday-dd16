@@ -47,7 +47,6 @@ function myFunction(dim) {
   .domain(["phase1", "phase2", "phase3"])
   .range([width/2,width/2,width/2]);
       
-      console.log(x)
   } 
     
     
@@ -74,6 +73,9 @@ x1 = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
   .range([height/2,height/2,height/2]);
   }
+    
+  
+    
 }
 
 
@@ -207,12 +209,12 @@ d3.csv("js/density.csv").then(data => {
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
             
             
-        
+        if (h==30){
     tooltip.html( "<p>Titolo: "+d.title+"</p><p>Team: "+d.group+"</p> <p>"+d.phase+"</p>")
        
       .style("left", (d3.event.pageX) +20 + "px")
       .style("top", (d3.event.pageY ) + "px")
-      .style("opacity", 100);
+      .style("opacity", 100);}
         
   })
   .on("mouseout", function(d) {
@@ -222,12 +224,12 @@ d3.csv("js/density.csv").then(data => {
         d3.select(next4).attr("href","images/img"+next2+".png")
     tooltip.style("opacity", 0);
   })
-.on("click",function(d){
+        .on("click",function(d){
           window.open(
       d.link,
-      '_blank' // <- This is what makes it open in a new window.
-    );
-    })
+      '_blank' 
+    );})
+
 
 
     
