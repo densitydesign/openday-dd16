@@ -4,6 +4,12 @@ var next1
 var next2
 var next3
 var next4
+var x
+var y
+var x1
+var y1
+var l
+var h
 
 let ch = window.innerHeight / 100;
 let cw = window.innerWidth / 100;
@@ -16,30 +22,64 @@ let svg = d3.select('#my_dataviz').append('svg')
 let data_setX = "group";
 
 
+var dim = window.innerWidth 
+console.log(dim)
+function myFunction(dim) {
+  if (dim<700) { // If media query matches
+    l=40
+      h=20
+ y = d3.scaleOrdinal()
+  .domain(["phase1", "phase2", "phase3"])
+  .range([ch*7,ch*27,ch*47]);
+
+      y1 = d3.scaleOrdinal()
+  .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
+  .range([ch*5, ch*10, ch*17, ch*20, ch*30, ch*30, ch*50, ch*40, ch*50]);
 
 
 
+ x1 = d3.scaleOrdinal()
+  .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
+  .range([20*cw,30,40*cw,10*cw,175,30,200,200,30*cw]);
 
 
-let x = d3.scaleOrdinal()
+ x = d3.scaleOrdinal()
+  .domain(["phase1", "phase2", "phase3"])
+  .range([width/2,width/2,width/2]);
+      
+      console.log(x)
+  } 
+    
+    
+    else {
+    l= 60
+        h=30
+    
+ x = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
   .range([0 + padding+20, ((width/3)*3) + padding,((width/3)*1.5) + padding]);
 
-let x1 = d3.scaleOrdinal()
+x1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
   .range([cw*5+20, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
 
 
 
-
-let y1 = d3.scaleOrdinal()
+ y1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
   .range([10*ch*3-20,30*ch+30,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3+150,20*ch*2+50,30*ch]);
 
 
-let y = d3.scaleOrdinal()
+ y = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
   .range([height/2,height/2,height/2]);
+  }
+}
+
+
+myFunction(dim) // Call listener function at run time
+
+
 
 
 
@@ -93,8 +133,8 @@ d3.csv("js/density.csv").then(data => {
     .data(data)
     .enter()
     .append('image').classed('circ', true)
-    .attr('width', 60)
-    .attr('height', 60)
+    .attr('width', l)
+    .attr('height', l)
     .attr('x', function(d) {
       // console.log(x(d.phase))
       return x1(d.group) - 20;
@@ -206,7 +246,7 @@ d3.csv("js/density.csv").then(data => {
     .force('y', d3.forceY(function(d) {
       return y1(d.group)
     }).strength(0.80))
-    .force('collide', d3.forceCollide(30)
+    .force('collide', d3.forceCollide(h)
       .iterations(32))
     .alphaDecay(0)
     .alpha(0.1)
