@@ -67,11 +67,12 @@ var j;
 
 
 $(".blank").click(function() {
-    var agamennone =$(this).attr("id");
+    var agamennone =$(this).attr("id")-1;
     console.log(agamennone)
     $("#laVasca").text(infopoetry[agamennone].Name)
     $("#maracaibo").text(infopoetry[agamennone].Name)
      $("#preview").attr("src",infopoetry[agamennone].img)
-    $("#ballacomeseibella").text(infopoetry[agamennone].Name + infopoetry[agamennone].link)
+    $("#ballacomeseibella").text(infopoetry[agamennone].Name) 
+    $("#wwwmipiacitu").attr("href", infopoetry[agamennone].link)
     
 })

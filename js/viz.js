@@ -10,14 +10,16 @@ let cw = window.innerWidth / 100;
 let height = 80 * ch;
 let width = 70 * cw;
 let padding = window.innerWidth * 0.05;
-console.log("ciao funzia")
 let svg = d3.select('#my_dataviz').append('svg')
   .attr('width', width)
   .attr('height', height)
+let data_setX = "group";
 
-let colors = d3.scaleOrdinal()
-  .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9 "])
-  .range(["red", "green", "blue", "yellow", "orange", "pink", "cyan", "grey", "magenta"]);
+
+
+
+
+
 
 let x = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
@@ -28,17 +30,24 @@ let x1 = d3.scaleOrdinal()
   .range([cw*5+20, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
 
 
-function rnd( max) {
-  return Math.random() * (max);
-}
 
-// starting visualization with:
-
-let data_setX = "group";
 
 let y1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
   .range([10*ch*3-20,30*ch+30,20*ch*2,10*ch*3,20*ch*2,30*ch,10*ch*3+150,20*ch*2+50,30*ch]);
+
+
+let y = d3.scaleOrdinal()
+  .domain(["phase1", "phase2", "phase3"])
+  .range([height/2,height/2,height/2]);
+
+
+
+
+
+
+
+
 
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
@@ -241,7 +250,7 @@ d3.csv("js/density.csv").then(data => {
     simulation.force('y', d3.forceY(function(d) {
 
       if (data_setX === "phase") {
-        return height / 2
+        return y(d.phase)
       } else {
         return y1(d.group)
       }
