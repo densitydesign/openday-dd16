@@ -416,6 +416,7 @@ h4 {
   width: 100%;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin-bottom: 20em;
 }
 
 .info-preview {}
