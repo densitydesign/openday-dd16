@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   //Grid d3
 
   var width = 3000,

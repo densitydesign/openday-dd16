@@ -92,22 +92,3 @@ function menelao (a,j) {
             return  a[j].Instagram
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
