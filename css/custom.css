@@ -470,6 +470,17 @@ h4 {
   max-width: 100%;
 }
 
+.info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-close {
+  display: none;
+}
+
+
 .blank {
   height: 6em;
   width: 6em;
@@ -658,5 +669,9 @@ h4 {
     padding: 1em;
     margin-left: 0em;
     margin-bottom: 1em;
+  }
+
+  .info-close {
+    display: contents;
   }
 }
