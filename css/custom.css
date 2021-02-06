@@ -155,9 +155,9 @@ h4 {
   flex-direction: column;
 }
 
-.container-live h1{
-  margin-left:0.4em;
-  margin-top:0.4em;
+.container-live h1 {
+  margin-left: 0.4em;
+  margin-top: 0.4em;
 }
 
 .container {
@@ -446,14 +446,19 @@ h4 {
   width: 35%;
   height: 80%;
   position: sticky;
-  top: 0;
+  top: 1em;
+  margin-left: .5em;
 }
 
 .content-infopoetry_right p {
   color: black;
   max-width: 100%;
+}
+
+.info-card {
   border: 2px solid black;
   background-color: white;
+  margin-top: 1em;
   padding: 1em;
 }
 
@@ -462,7 +467,7 @@ h4 {
   flex-direction: row;
   width: 100%;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 20em;
 }
 
@@ -480,17 +485,18 @@ h4 {
   display: none;
 }
 
-
 .blank {
   height: 6em;
   width: 6em;
   background-color: blue;
-  margin: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
 }
 
 .blank img {
-  max-width: 7em;
+  max-width: 6em;
   min-width: 0.5em;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
