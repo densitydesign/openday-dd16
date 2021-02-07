@@ -21,6 +21,9 @@ let svg = d3.select('#my_dataviz').append('svg')
   .attr('height', height)
 let data_setX = "group";
 
+var tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip");
+ d3.select(".tooltip").style("display", "none")
 
 var dim = window.innerWidth 
 console.log(dim)
@@ -87,14 +90,14 @@ myFunction(dim) // Call listener function at run time
 
 
 
-
-
-
-
-var tooltip = d3.select("body").append("div")
-    .attr("class", "tooltip");
-
-
+//
+//
+//
+//
+//var tooltip = d3.select("body").append("div")
+//    .attr("class", "tooltip");
+//
+//
 
 
 
@@ -217,22 +220,102 @@ d3.csv("js/density.csv").then(data => {
       .style("top", (d3.event.pageY ) + "px")
       .style("display", "block");}
         
+        else {
+             tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p> <p>  "+d.phase+"</p> <a href="+d.link+">Click here to visit</a>")
+
+       
+      .style("left", (d3.event.pageX) +20 + "px")
+      .style("top", (d3.event.pageY ) + "px")
+      .style("display", "block");}
+
+        
   })
   .on("mouseout", function(d) {
          d3.select(this).attr("href",d.img)
          d3.select(next3).attr("href","images/img"+next1+".png")
         d3.selectAll(".circ").transition().style("opacity",1)
         d3.select(next4).attr("href","images/img"+next2+".png")
+        
     tooltip.style("display", "none");
   })
         .on("click",function(d){
-          window.open(
-      d.link,
-      '_blank' 
-    );})
+        if (h==30){
+          window.open(d.link,'_blank')
+        }
+        else{
+           
+          d3.select(this).attr("href",d.imgHover)
+        d3.selectAll(".circ").transition().style("opacity",.5)
+        d3.select(this).transition().style("opacity",1)
+             tooltip.style("display", "block")
+      
+//       
+     
+        cod = d.id
+        next =  cod.slice(1)
+        if (next < 10){
+
+        next=parseInt(next)
+         next1 = next + 9;
+         next2 = next + 18;
+                             
+        next3 = "#p"+next1;
+         next4 = "#p"+next2;
+
+        
+           console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
+        
+        d3.select(next4).attr("href","images/imgH"+next2+".png")}
+        else if ((next < 19)&&(next > 9))
+        {
+        next =  cod.slice(1)
+        next=parseInt(next)
+        next1 = next - 9;
+        next2 = next + 9;
+        next3 = "#p"+next1;
+        next4 = "#p"+next2;
+        console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png") 
+        d3.select(next4).attr("href","images/imgH"+next2+".png")
+        }
+            
+        else {
+                  next =  cod.slice(1)
+        next=parseInt(next)
+         next1 = next - 9;
+         next2 = next - 18;
+                             
+        next3 = "#p"+next1;
+         next4 = "#p"+next2;
+
+        
+           console.log(next)
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
+            
+        
+        d3.select(next4).attr("href","images/imgH"+next2+".png")}
+            
+        
+        tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p>  <a href="+d.link+">Click here to visit</a>")
+
+       
+      .style("left", (d3.event.pageX) +20 + "px")
+      .style("top", (d3.event.pageY ) + "px")
+      .style("display", "block");
+            console.log("lucano")
+    }
+    })
+
+  
+        
+            
 
 
-
+//  
+//    svg.on("click",function(){
+//         tooltip.style("display", "none")
+//    })
     
     
     
