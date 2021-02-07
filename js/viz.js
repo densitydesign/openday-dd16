@@ -210,11 +210,12 @@ d3.csv("js/density.csv").then(data => {
             
             
         if (h==30){
-    tooltip.html( "<p>Titolo: <b>"+d.title+"</b></p><p>Team: "+d.group+"</p> <p>"+d.phase+"</p>")
+    tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> <p>Phase: "+d.phase+"</p>")
+
        
       .style("left", (d3.event.pageX) +20 + "px")
       .style("top", (d3.event.pageY ) + "px")
-      .style("opacity", 100);}
+      .style("display", "block");}
         
   })
   .on("mouseout", function(d) {
@@ -222,7 +223,7 @@ d3.csv("js/density.csv").then(data => {
          d3.select(next3).attr("href","images/img"+next1+".png")
         d3.selectAll(".circ").transition().style("opacity",1)
         d3.select(next4).attr("href","images/img"+next2+".png")
-    tooltip.style("opacity", 0);
+    tooltip.style("display", "none");
   })
         .on("click",function(d){
           window.open(
