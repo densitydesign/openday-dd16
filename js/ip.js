@@ -34,20 +34,20 @@
 {"Group":"33","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/33.png","Name":"Tianjing Hu"},
 {"Group":"34","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/34.png","Name":"Danlin Song"},
 {"Group":"35","Instagram":"https://www.instagram.com/evetai1997","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/35.png","Name":"Yixuan Tai"},
-{"Group":"37","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/36.png","Name":"Pengbo Wang"},
-{"Group":"38","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/37.png","Name":"Wenxuan Wu"},
-{"Group":"39","Instagram":"https://www.instagram.com/duan.songwei","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/38.png","Name":"Songwei Duan"},
-{"Group":"40","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/39.png","Name":"Yuting Jiang"},
-{"Group":"41","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/40.png","Name":"Ruting Lin"},
-{"Group":"42","Instagram":"https://www.instagram.com/terry_chl","Twitter":"","Portfolio":"","LinkedIn":"https://www.linkedin.cn/in/chunhai-liu-05ba66148/","img":"student/41.png","Name":"Chunhai Liu"},
-{"Group":"43","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/42.png","Name":"Yuan Liu"},
-{"Group":"44","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/43.png","Name":"Xueyue Wu"},
-{"Group":"45","Instagram":"https://www.instagram.com/andre.calderolli","Twitter":"","Portfolio":"https://www.behance.net/acldrll","LinkedIn":"https://www.linkedin.com/in/acalderolli","img":"student/44.png","Name":"Andre' Barbosa Calderolli"},
-{"Group":"46","Instagram":"https://www.instagram.com/ferdeav","Twitter":"","Portfolio":"","LinkedIn":"https://www.linkedin.com/in/maria-fernanda-de-alba-valdez-b11158112/","img":"student/45.png","Name":"Maria Fernanda De Alba Valdez"},
-{"Group":"47","Instagram":"https://www.instagram.com/_hlgdrz_","Twitter":"_hlgdrz_","Portfolio":"https://www.behance.net/fatemehgoodarzi1","LinkedIn":"http://linkedin.com/in/fatemeh-goodarzi-ba1340169","img":"student/46.png","Name":"Fatemeh Goodarzi"},
-{"Group":"48","Instagram":"https://www.instagram.com/priscilayoshihara","Twitter":"@priyoshihara","Portfolio":"https://www.behance.net/priscilayoshihara","LinkedIn":"https://www.linkedin.com/in/priscilayoshihara/","img":"student/47.png","Name":"Priscila Tiemi Kawabata Yoshihara"},
-{"Group":"49","Instagram":"","Twitter":"","Portfolio":"https://www.behance.net/longardt","LinkedIn":"","img":"student/48.png","Name":"Johannes Longardt"},
-{"Group":"8","Instagram":"https://www.instagram.com/mariap925","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/49.png","Name":"Maria Paula Vargas Triana"}
+{"Group":"36","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/36.png","Name":"Pengbo Wang"},
+{"Group":"37","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/37.png","Name":"Wenxuan Wu"},
+{"Group":"38","Instagram":"https://www.instagram.com/duan.songwei","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/38.png","Name":"Songwei Duan"},
+{"Group":"39","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/39.png","Name":"Yuting Jiang"},
+{"Group":"40","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/40.png","Name":"Ruting Lin"},
+{"Group":"41","Instagram":"https://www.instagram.com/terry_chl","Twitter":"","Portfolio":"","LinkedIn":"https://www.linkedin.cn/in/chunhai-liu-05ba66148/","img":"student/41.png","Name":"Chunhai Liu"},
+{"Group":"42","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/42.png","Name":"Yuan Liu"},
+{"Group":"43","Instagram":"","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/43.png","Name":"Xueyue Wu"},
+{"Group":"44","Instagram":"https://www.instagram.com/andre.calderolli","Twitter":"","Portfolio":"https://www.behance.net/acldrll","LinkedIn":"https://www.linkedin.com/in/acalderolli","img":"student/44.png","Name":"Andre' Barbosa Calderolli"},
+{"Group":"45","Instagram":"https://www.instagram.com/ferdeav","Twitter":"","Portfolio":"","LinkedIn":"https://www.linkedin.com/in/maria-fernanda-de-alba-valdez-b11158112/","img":"student/45.png","Name":"Maria Fernanda De Alba Valdez"},
+{"Group":"46","Instagram":"https://www.instagram.com/_hlgdrz_","Twitter":"_hlgdrz_","Portfolio":"https://www.behance.net/fatemehgoodarzi1","LinkedIn":"http://linkedin.com/in/fatemeh-goodarzi-ba1340169","img":"student/46.png","Name":"Fatemeh Goodarzi"},
+{"Group":"47","Instagram":"https://www.instagram.com/priscilayoshihara","Twitter":"@priyoshihara","Portfolio":"https://www.behance.net/priscilayoshihara","LinkedIn":"https://www.linkedin.com/in/priscilayoshihara/","img":"student/47.png","Name":"Priscila Tiemi Kawabata Yoshihara"},
+{"Group":"48","Instagram":"","Twitter":"","Portfolio":"https://www.behance.net/longardt","LinkedIn":"","img":"student/48.png","Name":"Johannes Longardt"},
+{"Group":"49","Instagram":"https://www.instagram.com/mariap925","Twitter":"","Portfolio":"","LinkedIn":"","img":"student/49.png","Name":"Maria Paula Vargas Triana"}
 ,
 {"Group":"50","Instagram":"https://www.instagram.com/shesjulie.z","Twitter":"","Portfolio":"","LinkedIn":"https://www.linkedin.com/in/yunruizhu/","img":"student/50.png","Name":"Yunrui Zhu"},
 {"Group":"51","Instagram":"https://www.instagram.com/giulialbar","Twitter":"","Portfolio":"https://www.giuliabaraldi.com","LinkedIn":"https://www.linkedin.com/in/giulia-baraldi","img":"student/51.png","Name":"Giulia Baraldi"},
@@ -56,7 +56,7 @@
 {"Group":"54","Instagram":"","Twitter":"","Portfolio":"https://www.timolbrich.com","LinkedIn":"https://www.linkedin.com/in/tim-olbrich/","img":"student/54.png","Name":"Tim Olbrich"},
 {"Group":"55","Instagram":"https://www.instagram.com/vpallacci","Twitter":"@vpallacci","Portfolio":"","LinkedIn":"https://www.linkedin.com/in/valentina-pallacci/","img":"student/55.png","Name":"Valentina Pallacci"},
 {"Group":"56","Instagram":"https://www.instagram.com/alessiarodler","Twitter":"","Portfolio":"https://www.alessiarodler.com/","LinkedIn":"https://www.linkedin.com/in/alessia-rodler-96897616b/detail/photo/","img":"student/56.png","Name":"Alessia Rodler"},
-{"Group":"58","Instagram":"","Twitter":"","Portfolio":"https://www.vera-salvaderi.it","LinkedIn":"https://www.linkedin.com/in/vera-salvaderi-39644117b","img":"student/57.png","Name":"Vera Salvaderi"}
+{"Group":"57","Instagram":"","Twitter":"","Portfolio":"https://www.vera-salvaderi.it","LinkedIn":"https://www.linkedin.com/in/vera-salvaderi-39644117b","img":"student/57.png","Name":"Vera Salvaderi"}
 ]
 
 var j; 

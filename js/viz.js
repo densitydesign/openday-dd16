@@ -55,9 +55,9 @@ function myFunction(dim) {
         h=30
     
  x = d3.scaleOrdinal()
-  .domain(["phase1", "phase2", "phase3"])
-  .range([0 + padding+20, ((width/3)*3) + padding,((width/3)*1.5) + padding]);
-
+  .domain(["Data as Material", "Data as Artifacts", "Data Publics"])
+  .range([((width/3)*3) + padding,padding,((width/3)*1.5),0 + padding+30]);
+//0 + padding+20, ((width/3)*3) + padding,((width/3)*1.5) + padding
 x1 = d3.scaleOrdinal()
   .domain(["Group1", "Group2", "Group3", "Group4", "Group5", "Group6", "Group7", "Group8", "Group9"])
   .range([cw*5+20, cw*80, cw*20, cw*30, cw*40, cw*50, cw*60, cw*70, cw*10]);
