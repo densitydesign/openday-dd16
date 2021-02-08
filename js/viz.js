@@ -21,7 +21,7 @@ let svg = d3.select('#my_dataviz').append('svg')
   .attr('height', height)
 let data_setX = "group";
 
-var tooltip = d3.select("body").append("div")
+var tooltip = d3.select("#filter").append("div")
     .attr("class", "tooltip");
  d3.select(".tooltip").style("display", "none")
 
@@ -220,10 +220,8 @@ d3.csv("js/density.csv").then(data => {
       .style("top", (d3.event.pageY ) + "px")
       .style("display", "block");}
 
-        else {
-             tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p> <p>  "+d.phase+"</p> <a href="+d.link+">Click here to visit</a>")
+       
 
-      .style("display", "block");}
 
 
   })
@@ -233,7 +231,7 @@ d3.csv("js/density.csv").then(data => {
         d3.selectAll(".circ").transition().style("opacity",1)
         d3.select(next4).attr("href","images/img"+next2+".png")
 
-    tooltip.style("display", "none");
+    if (h==30){tooltip.style("display", "none");}
   })
         .on("click",function(d){
         if (h==30){
@@ -294,13 +292,15 @@ d3.csv("js/density.csv").then(data => {
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
 
 
-        tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p>  <a href="+d.link+">Click here to visit</a>")
 
-
-        tooltip.html(  "<div class='info-close'><h3>X</h3></div>"+ "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p>  <img src='img/assets/info-link.svg'>")
+        tooltip.html(  "<div class='info-close'><h3>X</h3></div>"+ "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p> <a href='"+d.link+"'> <img src='img/assets/info-link.svg'></a>")
 
 
       .style("display", "block");
+            $(".info-close").click(function() {
+    $(".tooltip").css("display","none")
+})
+
             console.log("lucano")
     }
     })
