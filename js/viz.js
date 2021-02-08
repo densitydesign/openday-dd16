@@ -244,7 +244,7 @@ d3.csv("js/density.csv").then(data => {
           d3.select(this).attr("href",d.imgHover)
         d3.selectAll(".circ").transition().style("opacity",.5)
         d3.select(this).transition().style("opacity",1)
-             tooltip.style("display", "block")
+//             tooltip.style("display", "block")
       
 //       
      
