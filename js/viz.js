@@ -294,7 +294,7 @@ d3.csv("js/density.csv").then(data => {
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
 
 
-        tooltip.html( "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p>  <img src='img/assets/info-link.svg'>")
+        tooltip.html(  "<div class='info-close'><h3>X</h3></div>"+ "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p>  <img src='img/assets/info-link.svg'>")
 
 
       .style("display", "block");
