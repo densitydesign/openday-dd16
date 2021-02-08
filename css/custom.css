@@ -465,7 +465,8 @@ div.tooltip {
 }
 
 .content-about_right {
-  flex-grow: 10;
+      width: 100%;
+
   display: flex;
   flex-direction: column;
   margin-left: 20%;
@@ -509,6 +510,8 @@ div.tooltip {
   display: flex;
   flex-direction: row;
   margin-bottom: 1em;
+  flex-wrap: nowrap;
+overflow-x: auto;
 }
 
 .id {
