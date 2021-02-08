@@ -508,6 +508,8 @@ div.tooltip {
   display: flex;
   flex-direction: row;
   margin-bottom: 1em;
+  flex-wrap: nowrap;
+overflow-x: auto;
 }
 
 .id {
