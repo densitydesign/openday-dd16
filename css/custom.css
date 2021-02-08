@@ -389,6 +389,10 @@ div.tooltip {
     text-decoration: underline
     }
 
+    .tooltip img {
+      max-width: 3em;
+    }
+
 .home {
   flex: 1 0 auto;
   display: flex;
@@ -651,8 +655,7 @@ div.tooltip {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50vw;
-    height: 20vh;
+    width: 60vw;
     transform: translate(-50%, -50%);
     padding: 1em;
     font: 15px sans-serif;
