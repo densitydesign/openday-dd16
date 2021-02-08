@@ -360,38 +360,40 @@ h4 {
   color: white;
 }
 
-div.tooltip {
+.tooltip {
   position: absolute;
   padding: 1em;
+  width: 12em;
   font: 15px sans-serif;
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, .9);
   border: 2px solid black;
   pointer-events: none;
-
 }
 
-    .tooltip p {
-        color: black;
-        margin-left: .2em;
-        font-family: "andret_tblight";
-        font-size: 1em
-    }
-    #primo{
-        font-size: 1.1em;
-        font-family: "andret_tbbold";
+.tooltip p {
   color: black;
-    }
-.tooltip a {
-        color: black;
-        margin-left: .2em;
-        font-family: "andret_tblight";
-        font-size: 1em;
-    text-decoration: underline
-    }
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em
+}
 
-    .tooltip img {
-      max-width: 3em;
-    }
+#primo {
+  font-size: 1.1em;
+  font-family: "andret_tbbold";
+  color: blue;
+}
+
+.tooltip a {
+  color: black;
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em;
+  text-decoration: underline
+}
+
+.tooltip img {
+  max-width: 3em;
+}
 
 .home {
   flex: 1 0 auto;
@@ -651,7 +653,7 @@ div.tooltip {
     margin-top: 1em;
   }
 
-.tooltip {
+  .tooltip {
     position: absolute;
     top: 50%;
     left: 50%;
