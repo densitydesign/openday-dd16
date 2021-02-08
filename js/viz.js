@@ -25,7 +25,7 @@ var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
  d3.select(".tooltip").style("display", "none")
 
-var dim = window.innerWidth 
+var dim = window.innerWidth
 console.log(dim)
 function myFunction(dim) {
   if (dim<700) { // If media query matches
@@ -49,14 +49,14 @@ function myFunction(dim) {
  x = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
   .range([width/2,width/2,width/2]);
-      
-  } 
-    
-    
+
+  }
+
+
     else {
     l= 60
         h=30
-    
+
  x = d3.scaleOrdinal()
   .domain(["Data as Material", "Data as Artifacts", "Data Publics"])
   .range([((width/3)*3) + padding,padding,((width/3)*1.5),0 + padding+30]);
@@ -76,9 +76,9 @@ x1 = d3.scaleOrdinal()
   .domain(["phase1", "phase2", "phase3"])
   .range([height/2,height/2,height/2]);
   }
-    
-  
-    
+
+
+
 }
 
 
@@ -163,9 +163,9 @@ d3.csv("js/density.csv").then(data => {
         d3.select(this).attr("href",d.imgHover)
         d3.selectAll(".circ").transition().style("opacity",.5)
         d3.select(this).transition().style("opacity",1)
-      
-//       
-     
+
+//
+
         cod = d.id
         next =  cod.slice(1)
         if (next < 10){
@@ -173,14 +173,14 @@ d3.csv("js/density.csv").then(data => {
         next=parseInt(next)
          next1 = next + 9;
          next2 = next + 18;
-                             
+
         next3 = "#p"+next1;
          next4 = "#p"+next2;
 
-        
+
            console.log(next)
         d3.select(next3).attr("href","images/imgH"+next1+".png")
-        
+
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
         else if ((next < 19)&&(next > 9))
         {
@@ -191,48 +191,48 @@ d3.csv("js/density.csv").then(data => {
         next3 = "#p"+next1;
         next4 = "#p"+next2;
         console.log(next)
-        d3.select(next3).attr("href","images/imgH"+next1+".png") 
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
         d3.select(next4).attr("href","images/imgH"+next2+".png")
         }
-            
+
         else {
                   next =  cod.slice(1)
         next=parseInt(next)
          next1 = next - 9;
          next2 = next - 18;
-                             
+
         next3 = "#p"+next1;
          next4 = "#p"+next2;
 
-        
+
            console.log(next)
         d3.select(next3).attr("href","images/imgH"+next1+".png")
-            
-        
+
+
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
-            
-            
+
+
         if (h==30){
     tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> <p>Phase: "+d.phase+"</p>")
 
-       
+
       .style("left", (d3.event.pageX) +20 + "px")
       .style("top", (d3.event.pageY ) + "px")
       .style("display", "block");}
-        
+
         else {
              tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p> <p>  "+d.phase+"</p> <a href="+d.link+">Click here to visit</a>")
 
       .style("display", "block");}
 
-        
+
   })
   .on("mouseout", function(d) {
          d3.select(this).attr("href",d.img)
          d3.select(next3).attr("href","images/img"+next1+".png")
         d3.selectAll(".circ").transition().style("opacity",1)
         d3.select(next4).attr("href","images/img"+next2+".png")
-        
+
     tooltip.style("display", "none");
   })
         .on("click",function(d){
@@ -240,14 +240,14 @@ d3.csv("js/density.csv").then(data => {
           window.open(d.link,'_blank')
         }
         else{
-           
+
           d3.select(this).attr("href",d.imgHover)
         d3.selectAll(".circ").transition().style("opacity",.5)
         d3.select(this).transition().style("opacity",1)
              tooltip.style("display", "block")
-      
-//       
-     
+
+//
+
         cod = d.id
         next =  cod.slice(1)
         if (next < 10){
@@ -255,14 +255,14 @@ d3.csv("js/density.csv").then(data => {
         next=parseInt(next)
          next1 = next + 9;
          next2 = next + 18;
-                             
+
         next3 = "#p"+next1;
          next4 = "#p"+next2;
 
-        
+
            console.log(next)
         d3.select(next3).attr("href","images/imgH"+next1+".png")
-        
+
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
         else if ((next < 19)&&(next > 9))
         {
@@ -273,47 +273,47 @@ d3.csv("js/density.csv").then(data => {
         next3 = "#p"+next1;
         next4 = "#p"+next2;
         console.log(next)
-        d3.select(next3).attr("href","images/imgH"+next1+".png") 
+        d3.select(next3).attr("href","images/imgH"+next1+".png")
         d3.select(next4).attr("href","images/imgH"+next2+".png")
         }
-            
+
         else {
                   next =  cod.slice(1)
         next=parseInt(next)
          next1 = next - 9;
          next2 = next - 18;
-                             
+
         next3 = "#p"+next1;
          next4 = "#p"+next2;
 
-        
+
            console.log(next)
         d3.select(next3).attr("href","images/imgH"+next1+".png")
-            
-        
-        d3.select(next4).attr("href","images/imgH"+next2+".png")}
-            
-        
-        tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p>  <a href="+d.link+">Click here to visit</a>")
 
-       
+
+        d3.select(next4).attr("href","images/imgH"+next2+".png")}
+
+
+        tooltip.html( "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p>  <img src='img/assets/info-link.svg'>")
+
+
       .style("display", "block");
             console.log("lucano")
     }
     })
 
-  
-        
-            
 
 
-//  
+
+
+
+//
 //    svg.on("click",function(){
 //         tooltip.style("display", "none")
 //    })
-    
-    
-    
+
+
+
   // Start force layout
   let simulation = d3.forceSimulation(data)
     .force('x', d3.forceX(function(d) {
