@@ -244,7 +244,7 @@ d3.csv("js/density.csv").then(data => {
           d3.select(this).attr("href",d.imgHover)
         d3.selectAll(".circ").transition().style("opacity",.5)
         d3.select(this).transition().style("opacity",1)
-             tooltip.style("display", "block")
+//             tooltip.style("display", "block")
 
 //
 
@@ -292,6 +292,9 @@ d3.csv("js/density.csv").then(data => {
 
 
         d3.select(next4).attr("href","images/imgH"+next2+".png")}
+
+
+        tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p>  <a href="+d.link+">Click here to visit</a>")
 
 
         tooltip.html(  "<div class='info-close'><h3>X</h3></div>"+ "<p id='primo'>"+d.title+"</p><p>"+d.group+"</p>"+d.phase+"</p>  <img src='img/assets/info-link.svg'>")
