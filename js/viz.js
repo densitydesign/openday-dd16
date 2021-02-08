@@ -223,9 +223,6 @@ d3.csv("js/density.csv").then(data => {
         else {
              tooltip.html( "<p id='primo'>"+d.title+"</p><p>Team: "+d.group+"</p> Phase: "+d.phase+"</p> <p>  "+d.phase+"</p> <a href="+d.link+">Click here to visit</a>")
 
-       
-      .style("left", (d3.event.pageX) +20 + "px")
-      .style("top", (d3.event.pageY ) + "px")
       .style("display", "block");}
 
         
