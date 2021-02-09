@@ -4,8 +4,6 @@ html {
   overflow-x: hidden;
 }
 
-.circ:hover {}
-
 body {
   margin: 0;
   /* cursor: url('cursor.png') 50 50, auto; */
@@ -23,8 +21,7 @@ body {
   top: 0;
   left: 0;
   display: none;
-  background-image: radial-gradient(circle 50px,
-      rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
+  background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
   border-radius: 100px;
   transform-origin: center;
   z-index: 999;
@@ -38,14 +35,12 @@ body {
 @keyframes gradient {
   from {
     transform: scale(1.0);
-    background-image: radial-gradient(circle 50px,
-        rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
+    background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
   }
 
   to {
     transform: scale(0.3);
-    background-image: radial-gradient(circle 50px,
-        rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 85%, rgba(255, 0, 0, 0) 100%);
+    background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 85%, rgba(255, 0, 0, 0) 100%);
   }
 }
 
@@ -122,13 +117,19 @@ h4 {
   margin-block-end: 1em;
 }
 
+#nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 3rem;
+  padding: 0 2rem 0 2rem;
+  width: calc(100vw - 4rem);
+}
+
 #home_logo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
-  margin-top: 3em;
-  margin-left: 2em;
   z-index: 1;
 }
 
@@ -240,7 +241,7 @@ h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1em 2em 1em 2em;
+  margin: 1em 0 1em 2em;
 }
 
 .bottone {
@@ -258,8 +259,8 @@ h4 {
 #filter {
   position: absolute;
   width: 10%;
-  margin-top: 1.5em;
-  line-height: 2em;
+  margin-top: 7rem;
+  line-height: 2rem;
 }
 
 #filter a {
@@ -369,33 +370,31 @@ div.tooltip {
   font: 15px sans-serif;
   background: rgba(255,255,255,.9);
   border: 2px solid black;
-  pointer-events: none;
-    z-index: 99;
-
+  z-index: 9999;
 }
 
-    .tooltip p {
-        color: black;
-        margin-left: .2em;
-        font-family: "andret_tblight";
-        font-size: 1em
-    }
-    #primo{
-        font-size: 1.1em;
-        font-family: "andret_tbbold";
+.tooltip p {
   color: black;
-    }
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em
+}
+#primo{
+  font-size: 1.1em;
+  font-family: "andret_tbbold";
+  color: black;
+}
 .tooltip a {
-        color: black;
-        margin-left: .2em;
-        font-family: "andret_tblight";
-        font-size: 1em;
-    text-decoration: underline
-    }
+  color: black;
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em;
+  text-decoration: underline
+}
 
-    .tooltip img {
-      max-width: 3em;
-    }
+.tooltip img {
+  max-width: 3em;
+}
 
 .home {
   flex: 1 0 auto;
@@ -412,6 +411,7 @@ div.tooltip {
 }
 
 #my_dataviz svg {
+  margin-top: 5rem;
   width: 100%;
   height: 100%;
 }
@@ -449,6 +449,7 @@ div.tooltip {
   display: flex;
   flex-direction: row;
   margin: 2em;
+  margin-top: 6rem;
 }
 
 .content-about_left {
@@ -465,8 +466,7 @@ div.tooltip {
 }
 
 .content-about_right {
-      width: 100%;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 20%;
@@ -511,11 +511,11 @@ div.tooltip {
   flex-direction: row;
   margin-bottom: 1em;
   flex-wrap: nowrap;
-overflow-x: auto;
+  overflow-x: auto;
 }
 
 .id {
-  padding: 1em;
+  margin-right: 2rem;
 }
 
 .id img {
@@ -533,6 +533,7 @@ overflow-x: auto;
   flex-direction: row;
   justify-content: flex-end;
   margin: 2em;
+  margin-top: 6rem;
 }
 
 .content-infopoetry_right {
@@ -608,7 +609,7 @@ overflow-x: auto;
 
 @media only screen and (max-width: 768px) {
   .menu {
-    margin: 1em 1.2em 1em 2em;
+    margin: 1em 0 1em 2em;
   }
 
   h1 {
@@ -622,6 +623,11 @@ overflow-x: auto;
   .home {
     margin-left: 1.25em;
     margin-right: 1em;
+  }
+
+  #nav {
+    padding: 0 1rem;
+    width: calc(100vw - 2rem);
   }
 
   #banner {
@@ -641,7 +647,8 @@ overflow-x: auto;
 
   #filter {
     align-self: flex-end;
-    margin-bottom: 1.25em;
+    margin-top: 0;
+    bottom: 10px;
   }
 
   #infopoetry {
@@ -658,7 +665,7 @@ overflow-x: auto;
     margin-top: 1em;
   }
 
-.tooltip {
+  .tooltip {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -668,7 +675,6 @@ overflow-x: auto;
     font: 15px sans-serif;
     background: rgba(255, 255, 255, .9);
     border: 2px solid black;
-    pointer-events: none;
   }
 
   .tooltip p {
@@ -710,7 +716,7 @@ overflow-x: auto;
   }
 
   #home_logo {
-    margin-left: 1.1em;
+    left: 1rem;
   }
 
   #home_logo img {
@@ -726,7 +732,7 @@ overflow-x: auto;
   }
 
   .content-about {
-    margin: 2em 0em 1em 1em;
+    margin: 6rem 0rem 1rem 1rem;
   }
 
   .content-about_left {
@@ -782,6 +788,7 @@ overflow-x: auto;
   .content-infopoetry {
     justify-content: center;
     margin: 1em;
+    margin-top: 6rem;
   }
 
   .content-infopoetry_left {

@@ -196,12 +196,14 @@ d3.csv("js/density.csv").then(data => {
 
         })
         .on("mousemove", () => {
-          let tWidth = tooltip.node().getBoundingClientRect().width;
+          if (window.innerWidth > 1024) {
+            let tWidth = tooltip.node().getBoundingClientRect().width;
 
-          if (d3.event.pageX <= window.innerWidth / 2) {
-            tooltip.style("top", (d3.event.pageY+15)+"px").style("left",(d3.event.pageX+15)+"px");
-          } else {
-            tooltip.style("top", (d3.event.pageY+15)+"px").style("left",(d3.event.pageX - tWidth)+"px");
+            if (d3.event.pageX <= window.innerWidth / 2) {
+              tooltip.style("top", (d3.event.pageY+15)+"px").style("left",(d3.event.pageX+15)+"px");
+            } else {
+              tooltip.style("top", (d3.event.pageY+15)+"px").style("left",(d3.event.pageX - tWidth)+"px");
+            }
           }
         })
         .on("mouseout", function(d) {
