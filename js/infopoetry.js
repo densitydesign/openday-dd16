@@ -15,7 +15,7 @@ d3.tsv(infopoems).then(data => {
   .classed("blank", true)
   .append("img")
   .attr("src", d => {
-    return `../images/infopoetry-covers/${d.image}`
+    return `./images/infopoetry-covers/${d.image}`
   })
   .on("click", d => {
     infopoint.style("visibility", "visible");
