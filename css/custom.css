@@ -1,10 +1,47 @@
 html {
   background-color: black;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  /* cursor: url('cursor.png') 50 50, auto; */
+}
+
+* {
+  cursor: none;
+}
+
+#cursor {
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
+  border-radius: 100px;
+  transform-origin: center;
+  z-index: 999;
+}
+
+.hoveredCursor {
+  animation: gradient 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+  from {
+    transform: scale(1.0);
+    background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 50%, rgba(255, 0, 0, 0) 100%);
+  }
+
+  to {
+    transform: scale(0.3);
+    background-image: radial-gradient(circle 50px, rgba(64, 62, 255, 1), rgba(64, 62, 255, 0.5) 85%, rgba(255, 0, 0, 0) 100%);
+  }
 }
 
 .background {
@@ -12,16 +49,15 @@ body {
   pointer-events: all;
 }
 
-  .banner-bottom {
-    display:none;
-  }
+.banner-bottom {
+  display: none;
+}
 
 path {
   fill: none;
   stroke: white;
   stroke-width: 0.5;
 }
-
 
 p {
   font-family: "andret_tblight";
@@ -67,15 +103,45 @@ h2 {
   margin-block-end: 0;
 }
 
-#home_logo {
+h3 {
+  font-family: 'andret_tblight';
+  font-size: 1.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h4 {
+  font-family: 'andret_tblight';
+  font-size: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  top: 8%;
-  margin-left: 2em;
+  top: 3rem;
+  padding: 0 2rem 0 2rem;
+  width: calc(100vw - 4rem);
+}
+
+#home_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   z-index: 1;
 }
 
 #home_logo img {
   max-width: 3.5em;
+}
+
+#home_logo p {
+  color: black;
+  margin-left: 0.5em;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 #countdown {
@@ -96,6 +162,7 @@ h2 {
   z-index: 10;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
+  cursor: none;
 }
 
 @keyframes design_list_slide {
@@ -122,17 +189,37 @@ h2 {
   font-size: 1.2em;
 }
 
-.container {
+.container_pre {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-live {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-live h1 {
+  margin-left: 0.4em;
+  margin-top: 6rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   order: 3;
   margin-left: 2em;
-  padding-bottom: 6em;
+  padding-bottom: 9em;
 }
 
 .footer {
@@ -154,27 +241,77 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2em;
+  margin: 1em 0 1em 2em;
 }
 
 .bottone {
   font-family: "andret_tblight";
-  cursor: pointer;
+  cursor: none;
+  border-left: 4px solid grey;
+  padding-left: 0.5em;
 }
 
-#toggle:active {
-  text-decoration: underline;
+.bottone a {
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+#filter {
+  position: absolute;
+  width: 10%;
+  margin-top: 7rem;
+  line-height: 2rem;
+}
+
+#filter a {
+  color: black;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.stroke {
+  stroke: black;
+  stroke-width: 2;
+}
+
+.filter-active {
+  border-left: 4px solid #403EFF;
+}
+
+.filter-active a {
+  font-family: 'andret_tbmedium';
 }
 
 #empty {
   flex-grow: 1;
 }
 
+.button-landing {
+  position: absolute;
+  position: absolute;
+  bottom: 4em;
+  left: 2em;
+  z-index: 1;
+  border: 2px solid white;
+  padding: 0.5em 1em 0.5em 1em;
+  text-align: center;
+  background-color: black;
+  cursor: none;
+}
+
 .button {
   border: 2px solid black;
   padding: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0.5em;
   text-align: center;
+}
+
+.button_active {
+  border: 2px solid black;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  text-align: center;
+  background-color: black;
 }
 
 .button a {
@@ -183,28 +320,301 @@ h2 {
   margin-block-end: 0;
 }
 
+.button_active a {
+  color: white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.button-light {
+  border: 2px solid white;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  text-align: center;
+  background-color: black;
+}
+
+.button-light_active {
+  border: 2px solid white;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  text-align: center;
+  background-color: white;
+}
+
+.button-light_active a {
+  color: black;
+}
+
+.button-light a {
+  color: white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  background-color: black;
+}
+
+#gwork {
+  background-color: black;
+  color: white;
+}
+
+
+
+#gwork a {
+  color: white;
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 1em;
+  font: 15px sans-serif;
+  background: rgba(255,255,255,.9);
+  border: 2px solid black;
+  z-index: 9999;
+}
+
+.tooltip p {
+  color: black;
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em
+}
+#primo{
+  font-size: 1.1em;
+  font-family: "andret_tbbold";
+  color: black;
+}
+.tooltip a {
+  color: black;
+  margin-left: .2em;
+  font-family: "andret_tblight";
+  font-size: 1em;
+  text-decoration: underline
+}
+
+.tooltip img {
+  max-width: 3em;
+}
+
 .home {
   flex: 1 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-left: 2em;
   margin-right: 2em;
+  font-family: "andret_tblight"
 }
 
 .visualizzazione {
-  background-color: red;
+  width: 100vw;
+  height: 70vh;
 }
 
 #my_dataviz svg {
+  margin-top: 5rem;
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
-.infographic p {
-  margin: auto;
+#infopoetry {
+  position: absolute;
+  top: 90%;
+  left: 87%;
+  z-index: 2;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.content a {
+  text-decoration: underline;
+  cursor: none;
+  padding-right: 3em;
+}
+
+.content a:hover {
+  color: #403EFF;
+}
+
+.content h1 {
+  font-family: "andret_tblight";
+  font-size: 3em;
+}
+
+.content-about {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  margin-top: 6rem;
+}
+
+.content-about_left {
+  flex-grow: 1;
+  width: 15vw;
+  border: 2px solid black;
+  background-color: white;
+  padding: 1em;
+  position: absolute;
+}
+
+.content-about_left p {
+  color: black;
+}
+
+.content-about_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}
+
+.content-live {
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+}
+
+.content-live iframe {
+  min-height: 50vh;
+  border: 1px solid white;
+  margin-bottom: 1em;
+}
+
+.content-live_left {
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+}
+
+.content-live_right {
+  width: 30vw;
+  height: 100%;
+  border: 1px solid white;
+  padding: 1em;
+  margin-left: 1em;
+}
+
+.content-live_right a {
+  text-decoration: underline;
+}
+
+.content-live_right a:hover {
+  color: #403EFF;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.id {
+  margin-right: 2rem;
+}
+
+.id img {
+  max-width: 7em;
+  min-width: 0.5em;
+}
+
+.id p {
+  color: black;
+  max-width: 7em;
+}
+
+.content-infopoetry {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 2em;
+  margin-top: 6rem;
+}
+
+.content-infopoetry_right {
+  width: 35%;
+  height: 80%;
+  position: sticky;
+  top: 1em;
+  margin-left: .5em;
+}
+
+.content-infopoetry_right p {
+  color: black;
+  max-width: 100%;
+}
+
+.info-card {
+  height: 380px;
+  overflow: scroll;
+  border: 2px solid black;
+  background-color: white;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.info-card p {
+  margin-block-start: 0em;
+}
+
+.info-link {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.info-link img {
+  max-width: 2em;
+}
+
+.content-infopoetry_left {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 20em;
+}
+
+.info-preview img {
+  max-width: 100%;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-close {
+  display: none;
+}
+
+.blank {
+  height: 6em;
+  width: 6em;
+  margin-bottom: 0.5em;
+  margin-right: 1em;
+}
+
+.blank img {
+  max-width: 6em;
+  min-width: 0.5em;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
+  .menu {
+    margin: 1em 0 1em 2em;
+  }
+
   h1 {
     font-size: 3.5em;
   }
@@ -213,8 +623,18 @@ h2 {
     font-size: 1em;
   }
 
+  .home {
+    margin-left: 1.25em;
+    margin-right: 1em;
+  }
+
+  #nav {
+    padding: 0 1rem;
+    width: calc(100vw - 2rem);
+  }
+
   #banner {
-    order:1;
+    order: 1;
   }
 
   #countdown {
@@ -228,15 +648,67 @@ h2 {
     font-size: 1.3em;
   }
 
+  #filter {
+    align-self: flex-end;
+    margin-top: 0;
+    bottom: 10px;
+  }
+
+  #infopoetry {
+    position: absolute;
+    margin-left: 67%;
+    left: 0%;
+  }
+
+  #infopoetry p {
+    text-align: right;
+  }
+
+  .visualizzazione {
+    margin-top: 1em;
+  }
+
+  .tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    font: 15px sans-serif;
+    background: rgba(255, 255, 255, .9);
+    border: 2px solid black;
+  }
+
+  .tooltip p {
+    color: black;
+    margin-left: .2em;
+    margin-bottom: 1em;
+    font-family: "andret_tblight";
+    font-size: 1em
+  }
+
+  #primo {
+    font-size: 1.1em;
+    font-family: "andret_tbbold";
+    color: blue;
+  }
+
+  .tooltip a {
+    color: black;
+    margin-left: .2em;
+    font-family: "andret_tblight";
+    font-size: 1em;
+    text-decoration: underline
+  }
+
   .title {
     order: 2;
     margin-left: 1.5em;
-    padding-bottom: 0;
-    padding-top: 80%;
   }
 
   .banner-bottom {
-    display:block;
+    display: none;
     order: 3;
     overflow: hidden;
     background-color: black;
@@ -246,16 +718,168 @@ h2 {
     flex-grow: 0;
   }
 
-
-    #home_logo {
-      margin-left: 1.5em;
-    }
+  #home_logo {
+    left: 1rem;
+  }
 
   #home_logo img {
     max-width: 4em;
   }
 
+  #home_logo p {
+    display: none;
+  }
+
   .footer {
     display: none;
+  }
+
+  .content-about {
+    margin: 6rem 0rem 1rem 1rem;
+  }
+
+  .content-about_left {
+    display: none;
+  }
+
+  .content-about_right {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10%;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 4px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    opacity: 50%;
+  }
+
+  .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .id {
+    padding: 0.5em 0.5em 0.5em 0;
+    text-align: center;
+    flex: 0 0 auto;
+  }
+
+  .id img {
+    max-width: 5em;
+  }
+
+  .id p {
+    width: 5em;
+    ;
+  }
+
+  .container-about {
+    overflow: hidden;
+  }
+
+  .content-infopoetry {
+    justify-content: center;
+    margin: 1em;
+    margin-top: 6rem;
+  }
+
+  .content-infopoetry_left {
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
+
+  .content-infopoetry_right {
+    display: none;
+    width: 80%;
+    height: auto;
+    position: fixed;
+    background-color: white;
+    padding: 1em 1em 0 1em;
+    border: 2px solid black;
+    top: 0;
+    margin-top: 3em;
+    margin-left: 0em;
+    z-index: 3;
+  }
+
+  .info-card {
+    border: 0px solid black;
+    background-color: white;
+    margin-top: 1em;
+    padding: 0em;
+    top: 0;
+  }
+
+  .info-close {
+    display: contents;
+  }
+
+  .info-link {
+    margin-bottom: 1em;
+  }
+
+  .info-preview img {
+    max-width: 100%;
+  }
+
+  .content-infopoetry_right p {
+    color: black;
+    border: 0px solid black;
+    padding: 0em;
+  }
+
+  .blank {
+    margin: 0.5em 0.5em 2em 0em;
+  }
+
+  .blank img {
+    max-height: 6.5em;
+    max-width: 6.5em;
+  }
+
+  .content-live {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+  }
+
+  .container-live h1 {
+    margin-top: 1em;
+    font-size: 2em;
+    width: 100vw;
+  }
+
+  .content-live iframe {
+    border: 1px solid white;
+    margin-bottom: 1em;
+  }
+
+  .content-live_left {
+    order: 2;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-live_right {
+    order: 1;
+    width: auto;
+    border: 1px solid white;
+    padding: 1em;
+    margin-left: 0em;
+    margin-bottom: 1em;
+    height: inherit;
   }
 }
